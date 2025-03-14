@@ -24,13 +24,13 @@
 6. Deploy Online Boutique to the cluster.
 
    ```sh
-   kubectl apply -f ./release/kubernetes-manifests.yaml
+   kubectl apply -f ./release/kubernetes-manifests.yaml -n <new-namespace>
    ```
 
 7. Wait for the pods to be ready.
 
    ```sh
-   kubectl get pods
+   kubectl get pods -n <new-namespace>
    ```
 
    After a few minutes, you should see the Pods in a `Running` state:
@@ -54,7 +54,7 @@
 7. Access the web frontend in a browser using the frontend's external IP.
 
    ```sh
-   kubectl get service frontend-external | awk '{print $4}'
+   kubectl get service frontend-external -n <new-namespace> | awk '{print $4}'
    ```
 
 
