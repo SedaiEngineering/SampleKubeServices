@@ -1,5 +1,5 @@
 # SampleKubeServices
-This is a stiped down version of Google's Online Boutique microservices demo application https://github.com/GoogleCloudPlatform/microservices-demo repo, customized for internal testing  and with simpler instructions.
+This is a concise version of Google's Online Boutique microservices demo application https://github.com/GoogleCloudPlatform/microservices-demo repo, customized for internal testing  and with simpler instructions.
 
 ## Quickstart (GKE)
 
