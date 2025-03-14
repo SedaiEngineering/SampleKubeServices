@@ -62,5 +62,5 @@
 
    Visit `http://EXTERNAL_IP` in a web browser to access your instance of Online Boutique.
 
-8.
+8. Describe one of the pod and make sure `istio-proxy` side car is installed
 9. Congrats! You've deployed the default Online Boutique with monitoring
