@@ -1,5 +1,5 @@
 # SampleKubeServices
-This is a version of https://github.com/GoogleCloudPlatform/microservices-demo repo, customized for internal use  
+This is a version of https://github.com/GoogleCloudPlatform/microservices-demo repo, customized for internal testing  
 
 ## Quickstart (GKE)
 
