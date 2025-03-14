@@ -1,12 +1,11 @@
 # SampleKubeServices
-This is a version of https://github.com/GoogleCloudPlatform/microservices-demo repo, customized for internal testing  
+This is a concise version of Google's Online Boutique microservices demo application https://github.com/GoogleCloudPlatform/microservices-demo repo, customized for internal testing  and with simpler instructions.
 
 ## Quickstart (GKE)
 
 1. Ensure you have the following requirements:
    - Shell environment with  `git`, and `kubectl`.
     
-
 2. Install istio using any of  the steps here : https://istio.io/latest/docs/setup/install/
 3. Create a new namespace
 4. Add the Istio injection labels to the new namespace.
@@ -64,3 +63,5 @@ This is a version of https://github.com/GoogleCloudPlatform/microservices-demo r
 
 8. Describe one of the pod and make sure `istio-proxy` side car is installed
 9. Congrats! You've deployed the default Online Boutique with monitoring
+
+Please refer to the docs folder for customization 
