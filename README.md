@@ -16,11 +16,9 @@
 5.  Clone the latest major version.
 
    ```sh
-   git clone --depth 1 --branch v0 https://github.com/SedaiEngineering/SampleKubeServices.git
+   git clone git@github.com:SedaiEngineering/SampleKubeServices.git
    cd microservices-demo/
    ```
-
-   The `--depth 1` argument skips downloading git history.
 
 
 6. Deploy Online Boutique to the cluster.
