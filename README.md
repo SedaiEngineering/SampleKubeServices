@@ -17,7 +17,7 @@
 
    ```sh
    git clone git@github.com:SedaiEngineering/SampleKubeServices.git
-   cd microservices-demo/
+   cd SampleKubeServices/microservices-demo/
    ```
 
 
