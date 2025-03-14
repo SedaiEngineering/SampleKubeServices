@@ -63,3 +63,5 @@ This is a stiped down version of Google's Online Boutique microservices demo app
 
 8. Describe one of the pod and make sure `istio-proxy` side car is installed
 9. Congrats! You've deployed the default Online Boutique with monitoring
+
+Please refer to the docs folder for customization 
