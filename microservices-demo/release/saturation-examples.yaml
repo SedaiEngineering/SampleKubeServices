@@ -1,0 +1,64 @@
+# CPU Saturation Example (~90% CPU utilization)
+# Uses polinux/stress — runs `stress --cpu` with workers pegged to consume
+# nearly all of the CPU limit (900m out of 1000m limit).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpu-saturation-example
+  labels:
+    app: cpu-saturation-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpu-saturation-example
+  template:
+    metadata:
+      labels:
+        app: cpu-saturation-example
+    spec:
+      containers:
+      - name: stress
+        image: polinux/stress
+        # 1 CPU worker; container limit is 1000m so this drives ~90% utilization
+        command: ["stress"]
+        args: ["--cpu", "1"]
+        resources:
+          requests:
+            cpu: 800m
+            memory: 64Mi
+          limits:
+            cpu: 1000m
+            memory: 128Mi
+---
+# Memory Saturation Example (~90% memory utilization)
+# Uses polinux/stress — allocates 460Mi of the 512Mi memory limit (~90%).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memory-saturation-example
+  labels:
+    app: memory-saturation-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memory-saturation-example
+  template:
+    metadata:
+      labels:
+        app: memory-saturation-example
+    spec:
+      containers:
+      - name: stress
+        image: polinux/stress
+        # Allocates 460Mi (~90% of the 512Mi limit) and holds it indefinitely
+        command: ["stress"]
+        args: ["--vm", "1", "--vm-bytes", "460M", "--vm-hang", "0"]
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 200m
+            memory: 512Mi
